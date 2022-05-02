@@ -1,0 +1,38 @@
+          Fragen zum Aufgabenblatt 05
+
+Fragen zu 5.1:
+
+1. Beschreiben Sie verbal die Idee für den Algorithmus, mit dem Sie den Abstand zwischen den Schiffen implementieren wollen.
+   Fertigen Sie dazu ev. eine Skizze an.
+
+Wenn wir eine Schiffe auf Field platzieren wollen. Zuerst bestimmen wir ,ob die Regel benutzen. Wenn es benutzen muss, dann ruft díe Methode CheckKeepDistance(). 
+Wenn Schiffe nicht auf dem links Seite ist, dann kann man prueft die links Tile aller Tile. 
+Wenn Schiffe nicht auf dem rechts Seite ist, dann kann man prueft die rechts Tile aller Tile. 
+Wenn Schiffe nicht auf dem oben Seite ist, dann kann man prueft die oben Tile aller Tile. 
+Wenn Schiffe nicht auf dem unter Seite ist, dann kann man prueft die unter Tile aller Tile.
+wenn die alles Vorraussetzung erfuellt, dann wird False zurueckgegeben. 
+Es gibt nur 2 Faelle, die eine Schiffe weiter zu platztieren.
+1.nicht nach der Regel
+2.Nach der Regel und CheckKeepDistance() mit False zurueckgeben. 
+
+2. Erklären Sie, wie Sie die erstellte Methode auf den Computerspieler übertragen knnen. 
+   Sind Aenderungen erforderlich? Wenn ja, welche sind dies im Detail?
+
+Wenn wir eine Schiffe auf Field platzieren wollen. Zuerst bestimmen wir ,ob die Regel benutzen. Wenn es benutzen muss, dann ruft díe Methode checkAndPlace() und checkAndPlace2(). 
+Wenn Schiffe nicht auf dem links Seite ist, dann kann man prueft die links Tile aller Tile. 
+Wenn Schiffe nicht auf dem rechts Seite ist, dann kann man prueft die rechts Tile aller Tile. 
+Wenn Schiffe nicht auf dem oben Seite ist, dann kann man prueft die oben Tile aller Tile. 
+Wenn Schiffe nicht auf dem unter Seite ist, dann kann man prueft die unter Tile aller Tile.
+wenn die alles Vorraussetzung erfuellt, dann wird False zurueckgegeben. 
+Es gibt nur 2 Faelle, die eine Schiffe weiter zu platztieren.
+1.nicht nach der Regel und mit checkAndPlace2() aufrufen.
+2.Nach der Regel und checkAndPlace() mit true zurueckgeben. 
+
+Fragen zu 5.2:
+
+1. Beschreiben Sie hier verbal die Vorgehensweise, wie ihre verbesserte Strategie für den Computerspieler aussehen soll.
+   Testen Sie aus, ob der Computerspieler damit haeufiger gewinnt. Hatten Sie Erfolg?
+
+Normaleweise wird die EasyAI immer eine Randem Punkt gewaehlt. Mit dem BetterAI haben wir eine neue Vorraussetzung ersetzt.
+Wenn die LastAttack hat etwas getroffen. Dann wird die naechste Attack mit die oben Tile gewaehlt. Wenn es nichts getroffen hat, wird weiter mit Random waehlen.
+   

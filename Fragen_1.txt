@@ -1,0 +1,61 @@
+Fragen zum Aufgabenblatt 01
+@ antworted by Gruppe 107 Youran Wang 719511
+
+zu Aufgabe 1:
+1) Warum muss bei der Methode hit() sichergestellt werden, dass das Schiff nicht bereits gesunken ist?
+Wenn das Schiff ist bereits gesunken, wird die weiter Schiesse nicht mehr funktioniert.
+Und ein Schiff kann maximal Treffe bekommt. Die Zahl des maximal Treffe ist die Laenge des Schiff.
+
+
+zu Aufgabe 2:
+1) Testen Sie die Konsolenausgabe der nicht transponierten Matrix und ueberlegen Sie sich, warum dies so geschieht.
+Das Array waechst zuerst in Zeilen, dann in Spalten. Aber in der Mathematik ist die Reihenfolge in der Spalten.
+
+
+
+zu Aufgabe 3:
+1) Informieren Sie sich ueber enums und wie sie eingesetzt werden. Wie sieht ihre Struktur (Syntax) aus?
+enum <Name> { WertA, WertB, ...}
+
+2) Beschreiben Sie, was die Methode bombard() im Detail macht.
+Uerprueft den Status des Feldes, ob sich darauf ein heles Schifffeld befindet, was getrefft werden kann.
+
+3) Welchen Status haben die FieldTiles(Kaestchen) und die Schiffsliste nach dem Erzeugen eines Spielfeldes?
+FieldTile haben dem Zustand STATE_WATER.
+Die Schiffsliste ist leer.
+
+4) Was wird in der Methode getTileAt() getestet, damit das Programm nicht einfach abstuerzt?
+Es getestet, ob die gegebenen Koordinaten innerhalb des Feldes sind.
+
+
+zu Aufgabe 4:
+1) Wie gross ist der Wert von tileSize? Woher bekommen Sie diese Information?
+Der Wert betraegt 32. 
+Dieser wird in der KLasse Constants vom package schiffeversenken.game gesetzt.
+
+2) Mit welchem Code koennen Sie in der Klasse GameFieldRenderer die Anzahl Spalten und Zeilen des Spielfeldes ermitteln?
+this.field.getSize().getX() fuer Spalten,
+this.field.getSize().getY() fuer Zeilen
+
+3) Woraus geht hervor, an welcher Stelle das Spielfeld gezeichnet werden soll?
+Der Methode renderGameField werden die Startkoordianten x und y als Parameter gegeben. 
+Von diesem Punkt werden die FieldTiles entsprechend gezeichent.
+
+Als Hilfe zum Rasterzeichnen legen Sie sich bitte eine Skizze zum Spielfeld an und tragen die zugehoerigen Werte ein.
+
+
+
+zu Aufgabe 5:
+1) Wo verwenden Sie Zeilenkommentare, wo Javadoc-Kommentare?
+Zeilenkommentare werden verwendet, um Ihren Code zu verdeutlichen.
+Zeilenkommentare schreibt neben der Zeile.
+
+Javadoc-Kommentare werden verwendet, um Klassen, Schnittstellen, Felder (Variablen), Konstruktoren und Methoden zu dokumentieren.
+Javadoc-Kommentare schreibt vor dem zu dokumentierenden Artikel.
+
+
+2) Was sollen Javadoc-Kommentare aussagen?
+Es soll beschriebt, was ist eingabe, was ist ausgabe und was ist das gemacht fuer
+
+3) Welche Annotationen muessen Sie im Javadoc-Kommentar vor einer Methode beruecksichtigen?
+@param 

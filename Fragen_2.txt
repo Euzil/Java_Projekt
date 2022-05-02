@@ -1,0 +1,33 @@
+Fragen zum Aufgabenblatt 02
+@ antworted by Gruppe 107 Youran Wang 719511
+Hinweise und Fragen zu Aufgabe 2.1:
+
+1) Lesen Sie in der HTML-Datei "Uebersicht Szenen -- Verhalten beim Szenenwechsel":
+   -- Was bewirken attach() und detatch()?
+attach(): 
+Es wird vor dem Rendern aufgerufen. Um das Datei im Programm benutzten. 
+detach():  
+Es wird aufgeruft, kurz bevor die Szene unsichtbar. Und Ueberprueft, welche Position wird beim Benutzter gewaehlt.
+
+2) Lesen Sie in der HTML-Datei den Abschnitt "Workdispatcher -- Wie man den Workdispatcher nutzt"
+   -- Warum wird der Workdispatcher in 2.1 eingesetzt?
+Um  jede Tiledatei auf dem Field zu laden.
+
+Nach Bearbeitung der Aufgabe 2.1:
+   Beim Versuch, ein Schiff zu platzieren, wird jetzt an der Maus angeheftet das Schiff angezeigt.
+   Testen Sie dies aus, auch mit Einsatz der Taste R. Registrieren Sie, wie die Schiffe spaeter aussehen sollen, 
+   auch wenn sie jetzt noch nicht platziert werden (siehe auch Abb. 1).
+
+Fragen zu Aufgabe 2.2:
+1) Welche Klasse beinhaltet die Methoden zum  Veraendern des Status einer Kachel im Spielfeld?
+Klasse GameField aus Package de.uniluebeck.itm.schiffeversenken.game.model
+
+2) Wo koennen Sie ersehen, dass die Schiffe noch nur aus mittleren Schiffsteilen bestehen?
+Methode lookupShipTile aus Klasse GameFieldRenderer aus Package de.uniluebeck.itm.schiffeversenken.game
+
+Fragen zu Aufgabe 2.3:
+1) Was muessen Sie beachten, damit die Schiffe der Laenge eins korrekt im Spielfeld angezeigt werden?
+Wenn wir eine Position der Schife bestimmen, dann brauchen wir nicht nur einfach an diese Position die Schife bezeichnen, aber die Laenge der Schife-Projekt auch ueberlegen. Weil die Schife nicht nur eine Position besitzt, hat es eine bestimmt Grssoe.
+
+2) Warum muessen die Spielfeldgrenzen beachtet werden? Was geschieht, wenn dies nicht gemacht wird?
+Das Field hat eine bestimmt Begrenz, Schife soll nicht aus dem Field bezeichnet wird. Wenn es nicht gemacht wird, wird error mit RuntimException aufgeruft wird. Und dann Field tile out of bounds ausgedruckt wird. 
