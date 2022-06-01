@@ -1,0 +1,67 @@
+Fragen zum Aufgabenblatt 03
+@ antworted by Gruppe 107 Youran Wang 719511
+Fragen zu 3.1:
+1. Was muss beim Konstruktor der erbenden Klasse bzgl. der Parameteruebergabe beachtet werden?
+Die Parameter vom beides soll gleich.
+Mit super benutzten, um die Methode des Oberklasse aufzurufen.
+
+2. Warum kann ich in der erbenden Klasse nicht direkt mit der Variablen field arbeiten?
+Weil wir haben 2 Fielde. Ein fuer Spieler und noch einen fuer Computer. Sie hat gleich Eigenschaften aber verschiedne Variable. z.B die Schiffe in Computersfield sollen gehidden sein. 
+Dann brauchen wir eine Unterklasse, der um das Computersfield geht.
+
+3. Was bedeutet das Ueberschreiben einer Methode?
+Es gibt eine Methode im Unterklasse, die hat Methodesname, Parameter, returnsTypen und Parametersname gleich wie eine Methode aus Oberklasse. Dann ist diese Methode eine Ueberschrieben des Methode aus Oberklasse.
+Aber hier soll man beachten, dass wenn es noch andere Methode aufrufen will, kann man getMethode benutzten. Aber im Oberklasse es wird wahrscheinlich mit this.Methode benutzt.  
+
+
+Fragen zu 3.2:
+1. Was berechnet die Anweisung 
+      Vec2 positionOnOpponentsField = mousePosition.add(model.getOpponentsFieldPosition().multiply(-1));
+Es geht um eine neue Position des Field auf GegenesField ersetzen. Jetzt haben wir eine Position(x,y) des Maus. Dann brauchen wir die Mausposition in positionOnOpponentsField (Vec2 positionOnOpponentsField) zu uebersetzen. 
+positionOnOpponentsField = mousePosition()+(-1)*OpponentsFieldPosition() = mousePosition()-OpponentsFieldPosition();
+OpponentsFieldPosition() ist die Mausposition des Urpunkt des GegenesField auf ganz Field. Wenn wir mousePosition()-OpponentsFieldPosition() gamacht, dann bekommen wir die Position auf GegenesField. 
+
+2. Skizze des Feldes mit positionOnOpponentsField und res 
+Dann rechnen wir die Bombsposition mit positionOnOpponentsField und res(FieldWeit=32)
+[0,32] [33,64] [65,96] [97,128] [129,160] [161,192] [193,224] [225,256] [257,288] [289,320] [321,352]  [353,384]  [385,416]  [417,448]  [449,480]  [481,512] 
+ 32      32      32       32       32       32         32        32         32       32         32         32         32        32          32        32
+(0,0)   (1,0)   (2,0)    (3,0)   (4,0)     (5,0)     (6,0)     (7,0)      (8,0)     (9,0)     (10,0)     (11,0)     (12,0)     (13,0)     (14,0)    (15,0)   [35,67]
+(0,1)   (1,1)   (2,1)    (3,1)   (4,1)     (5,1)     (6,1)     (7,1)      (8,1)     (9,1)     (10,1)     (11,1)     (12,1)     (13,1)     (14,1)    (15,1)   [68,99]
+(0,2)   (1,2)   (2,2)    (3,2)   (4,2)     (5,2)     (6,2)     (7,2)      (8,2)     (9,2)     (10,2)     (11,2)     (12,2)     (13,2)     (14,2)    (15,2)   [100,131]
+(0,3)   (1,3)   (2,3)    (3,3)   (4,3)     (5,3)     (6,3)     (7,3)      (8,3)     (9,3)     (10,3)     (11,3)     (12,3)     (13,3)     (14,3)    (15,3)   [132,163]
+(0,4)   (1,4)   (2,4)    (3,4)   (4,4)     (5,4)     (6,4)     (7,4)      (8,4)     (9,4)     (10,4)     (11,4)     (12,4)     (13,4)     (14,4)    (15,4)   [164,195]
+(0,5)   (1,5)   (2,5)    (3,5)   (4,5)     (5,5)     (6,5)     (7,5)      (8,5)     (9,5)     (10,5)     (11,5)     (12,5)     (13,5)     (14,5)    (15,5)   [196,227]
+(0,6)   (1,6)   (2,6)    (3,6)   (4,6)     (5,6)     (6,6)     (7,6)      (8,6)     (9,6)     (10,6)     (11,6)     (12,6)     (13,6)     (14,6)    (15,6)   [228,259]
+(0,7)   (1,7)   (2,7)    (3,7)   (4,7)     (5,7)     (6,7)     (7,7)      (8,7)     (9,7)     (10,7)     (11,7)     (12,7)     (13,7)     (14,7)    (15,7)   [260,291]
+(0,8)   (1,8)   (2,8)    (3,8)   (4,8)     (5,8)     (6,8)     (7,8)      (8,8)     (9,8)     (10,8)     (11,8)     (12,8)     (13,8)     (14,8)    (15,8)   [292,323]
+(0,9)   (1,9)   (2,9)    (3,9)   (4,9)     (5,9)     (6,9)     (7,9)      (8,9)     (9,9)     (10,9)     (11,9)     (12,9)     (13,9)     (14,9)    (15,9)   [324,355]
+(0,10)  (1,10)  (2,10)   (3,10)  (4,10)    (5,10)    (6,10)    (7,10)     (8,10)    (9,10)    (10,10)    (11,10)    (12,10)    (13,10)    (14,10)   (15,10)  [356,387]
+(0,11)  (1,11)  (2,11)   (3,11)  (4,11)    (5,11)    (6,11)    (7,11)     (8,11)    (9,11)    (10,11)    (11,11)    (12,11)    (13,11)    (14,11)   (15,11)  [388,419]
+(0,12)  (1,12)  (2,12)   (3,12)  (4,12)    (5,12)    (6,12)    (7,12)     (8,12)    (9,12)    (10,12)    (11,12)    (12,12)    (13,12)    (14,12)   (15,12)  [420,451]
+(0,13)  (1,13)  (2,13)   (3,13)  (4,13)    (5,13)    (6,13)    (7,13)     (8,13)    (9,13)    (10,13)    (11,13)    (12,13)    (13,13)    (14,13)   (15,13)  [452,483]
+(0,14)  (1,14)  (2,14)   (3,14)  (4,14)    (5,14)    (6,14)    (7,14)     (8,14)    (9,14)    (10,14)    (11,14)    (12,14)    (13,14)    (14,14)   (15,14)  [484,515]
+(0,15)  (1,15)  (2,15)   (3,15)  (4,15)    (5,15)    (6,15)    (7,15)     (8,15)    (9,15)    (10,15)    (11,15)    (12,15)    (13,15)    (14,15)   (15,15)  [516,547]
+ 
+
+
+3. Wie werden aus positionOnOpponentsField die Feldkoordinaten berechnet?
+positionOnOpponentsField() / Constants.TILE_SIZE = Teilsposition(tileX, tileY)
+
+4. Warum ist die Abfrage  
+       if (!fieldTile.wasAlreadyBombarded()) { ... 
+   notwendig? Gibt es in der Klasse FieldTile ein Attribut alreadyBombarded oder was macht die Methode?
+Wenn ein Field schon ein mal gewaehlt werden hat, dann soll es nicht mehr gewaehlt werden.
+Nur im einem Fall : Das Field ist nicht getroffen und auch nicht vermisst (also nicht benutzt werden), dann hat Sinn weiter zu laufen.  
+Im Klasse FieldTile hat eine Methode wasAlreadyBombarded() mit boolean-Typ zurueckgeben. Beim If-Anweisung wird diese Methode angeruft. Und die Status dieses FieldTile wird bekommt. 
+   
+5. Woraus ersieht man, dass die Spieler nach einem Treffer erneut drankommen, also kein Wechsel erfolgt?
+Methode setRoundChangingFlag im Klasse GameModel und im GameController aufgeruft werden. 
+Mit If-Anweisung. Nur die Bedingung fieldTile.bombard() nicht erfuellt, dann wird der Methode aufgeruft. 
+
+6. In welcher Klasse befindet sich die Methode, die die Kopie der Schiffsliste liefert? Wie koennen Sie 
+   aus der Klasse GameController darauf zugreifen?
+Klasse GameField Methode getCopyOfShipListAsArray() 
+Im Klasse GameController kann man eine getMethode() benutzten, um die Array des Schiffe zurueckzugeben(return).
+   
+7. Warum macht es Sinn, bei 2dii) eine Hilfsmethode anzulegen?
+Weil die Ueberpruefung des alle-Schiffe-gesunkt vom Computer und Spieler sind gleich. Dann brauchen wir nur eine Methode um beides pruefen. Das macht eindeutig und klar. 
